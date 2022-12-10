@@ -1,4 +1,4 @@
-import { part1, part2 } from './day1'
+import { part1, part2 } from "./day1";
 const input = `1000
 2000
 3000
@@ -12,13 +12,13 @@ const input = `1000
 8000
 9000
 
-10000`
+10000`;
 
-describe('day1', () => {
-    test('part1', () => {
-        expect(part1(input)).toEqual(24000)
-    })
-    test('part2', () => {
-        expect(part2(input)).toEqual(45000)
-    })
-})
+describe("day1", () => {
+  test("part1", () => {
+    expect(part1(input)).toEqual(24000);
+  });
+  test("part2", () => {
+    expect(part2(input)).toEqual(45000);
+  });
+});
