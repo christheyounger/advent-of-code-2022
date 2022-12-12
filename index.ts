@@ -1,8 +1,8 @@
 import { readFileSync } from "fs";
 import path from "path";
-import { part1, part2 } from "./day10";
+import { monkeyAbout } from "./day11";
 
-const input = readFileSync(path.join(__dirname, "day10.txt")).toString().trim();
+const input = readFileSync(path.join(__dirname, "day11.txt")).toString().trim();
 
-console.log(part1(input));
-console.log(part2(input));
+console.log(monkeyAbout(input));
+console.log(monkeyAbout(input, false, 10000));
