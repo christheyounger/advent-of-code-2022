@@ -1,4 +1,4 @@
-import { part1 } from "./day13";
+import { part1, part2 } from "./day13";
 
 const input = `[1,1,3,1,1]
 [1,1,5,1,1]
@@ -24,11 +24,11 @@ const input = `[1,1,3,1,1]
 [1,[2,[3,[4,[5,6,7]]]],8,9]
 [1,[2,[3,[4,[5,6,0]]]],8,9]`;
 
-describe("day 12", () => {
+describe("day 13", () => {
   test("part1", () => {
     expect(part1(input)).toEqual(13);
   });
-  // test("part2", () => {
-  //   expect(part2(input)).toEqual(29);
-  // });
+  test("part2", () => {
+    expect(part2(input)).toEqual(140);
+  });
 });

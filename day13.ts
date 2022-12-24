@@ -48,3 +48,17 @@ export const part1 = (input: string): number => {
   console.log({ indicies });
   return indicies.reduce((total, index) => total + index, 0);
 };
+
+export const part2 = (input: string): number => {
+  const indicies: number[] = [];
+  const pairs = prepare(input);
+  const packets: packet[] = [];
+  pairs.forEach(([a, b]) => packets.push(a, b));
+  packets.push([[2]], [[6]]);
+  packets.sort((a, b) => compare([b, a]));
+  const packetsStr = packets.map((packet) => JSON.stringify(packet));
+  console.log(packetsStr);
+  indicies.push(packetsStr.indexOf("[[2]]") + 1);
+  indicies.push(packetsStr.indexOf("[[6]]") + 1);
+  return indicies.reduce((total, index) => total * index, 1);
+};
